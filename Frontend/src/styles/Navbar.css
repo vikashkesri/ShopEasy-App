@@ -1,0 +1,139 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 10px 20px;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.navbar-brand a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Toggle button (mobile) */
+.navbar-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Links container */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Links */
+.navbar-links a,
+.navbar-links button,
+.navbar-links .cart-text {
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.navbar-links a:hover,
+.navbar-links button:hover {
+  color: #ff9800;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #444;
+  padding: 5px 0;
+  list-style: none;
+  border-radius: 5px;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 5px 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.dropdown-menu li:hover {
+  background: #555;
+}
+
+/* Logout button */
+.logout-btn {
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  color: #ff9800;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #333;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 10px;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links a,
+  .navbar-links button,
+  .navbar-links .cart-text {
+    padding: 10px 0;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: #444;
+    padding: 5px 0;
+    border-radius: 0;
+  }
+}
