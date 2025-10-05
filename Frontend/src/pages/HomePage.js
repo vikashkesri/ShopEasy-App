@@ -117,7 +117,7 @@ const HomePage = () => {
     loadMore();
   }, [page]);
 
-  // ✅ Add to cart with quantity = 1
+  // Add to cart with quantity = 1
   const addToCart = (product) => {
     const exist = cart.find((c) => c._id === product._id);
     let updatedCart = [];

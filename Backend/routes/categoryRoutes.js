@@ -27,4 +27,3 @@ router.delete("/delete-category/:id", requireSignIn, isAdmin, deleteCategoryCont
 
 
 export default router;
-

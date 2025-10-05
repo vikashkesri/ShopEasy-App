@@ -42,7 +42,7 @@ const CreateCategory = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/v1/category/create-category",
+        "https://shopease-app-fvn8.onrender.com/api/v1/category/create-category",
         { name },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -69,7 +69,7 @@ const CreateCategory = () => {
 
     try {
       const { data } = await axios.put(
-        `http://localhost:5000/api/v1/category/update-category/${selected._id}`,
+        `https://shopease-app-fvn8.onrender.com/api/v1/category/update-category/${selected._id}`,
         { name: updateName },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -95,7 +95,7 @@ const CreateCategory = () => {
 
     try {
       const { data } = await axios.delete(
-        `http://localhost:5000/api/v1/category/delete-category/${id}`,
+        `https://shopease-app-fvn8.onrender.com/api/v1/category/delete-category/${id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
